@@ -1,0 +1,4 @@
+negative_patterns:
+- "\n"
+- "#+ "
+- "\\*\\*"

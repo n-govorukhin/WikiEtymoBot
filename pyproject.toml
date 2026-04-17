@@ -1,0 +1,53 @@
+[build-system]
+requires = ["setuptools>=77.0.3", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "wikietymobot"
+version = "0.1.0"
+description = "Local AI CLI tool for researching word etymology via Wiktionary."
+readme = "README.md"
+requires-python = ">=3.12"
+license = "MIT"
+license-files = ["LICENSE"]
+authors = [{ name = "Nikolai Govorukhin", email = "n.y.govorukhin@gmail.com" }]
+dependencies = [
+  "aiohttp-client-cache>=0.14",
+  "aiosqlite>=0.22",
+  "beautifulsoup4>=4.12",
+  "halo>=0.0.31",
+  "html-to-markdown>=3.1",
+  "iso639-lang>=2.6",
+  "langchain-community>=0.3",
+  "langchain-core>=1.2",
+  "langchain-ollama>=1.0",
+  "langgraph>=1.1",
+  "prompt-toolkit>=3.0",
+  "pydantic>=2.11",
+  "pydantic-settings>=2.13",
+  "PyYAML>=6.0",
+  "scikit-learn>=1.5",
+  "termcolor>=3.0",
+  "tqdm>=4.67",
+]
+
+[project.scripts]
+wikietymobot = "cli:main"
+
+[tool.setuptools]
+package-dir = { "" = "src" }
+include-package-data = true
+py-modules = ["cli"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.data-files]
+"share/wikietymobot/resources" = [
+  "resources/keywords.yaml",
+  "resources/prompt_templates.yaml",
+  "resources/response_validation_config.yaml",
+]
+
+[tool.black]
+line-length = 120
