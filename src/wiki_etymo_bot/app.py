@@ -26,7 +26,7 @@ from .resources import Resources
 from .settings import Settings
 from .typing import ProgressBar, ProgressSpinner
 
-logger = logging.getLogger("chat")
+logger = logging.getLogger("app")
 
 
 class Response(NamedTuple):

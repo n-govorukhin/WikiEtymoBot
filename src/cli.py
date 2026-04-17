@@ -59,7 +59,7 @@ async def progress_bar_generator[T](
 
 
 def configure_logging():
-    logger = logging.getLogger("chat")
+    logger = logging.getLogger("app")
     logger.setLevel(settings.log_level)
     logger.propagate = False
     handler = logging.StreamHandler(sys.stderr)
