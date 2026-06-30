@@ -333,7 +333,7 @@ write_output --> read_input
 Опция `--log-level` позволяет включить логирование и проследить, как агент анализирует вопрос и собирает данные.
 
 ```
-cli.py "Откуда слово дипломат?" --log-level info
+wikietymobot "Откуда слово дипломат?" --log-level info
 Recognized the language: Russian.
 Decided to search "дипломат" (Russian).
 Requested article en.wiktionary.org/wiki/дипломат#Russian (Russian).
